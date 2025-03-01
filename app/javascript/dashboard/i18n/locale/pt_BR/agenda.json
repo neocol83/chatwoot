@@ -1,0 +1,35 @@
+{
+  "AGENDA": {
+    "TITLE": "Agenda",
+    "SUBTITLE": "Gerencie a agenda da equipe",
+    "SETTINGS": {
+      "TITLE": "Configurações",
+      "GENERAL": {
+        "TITLE": "Configurações Gerais",
+        "NOTIFICATIONS": {
+          "EMAIL": "Receber notificações por email",
+          "PUSH": "Receber notificações push"
+        }
+      }
+    },
+    "AVAILABILITY": {
+      "TITLE": "Disponibilidade",
+      "DAYS": {
+        "LABEL": "Dias Disponíveis"
+      },
+      "HOURS": {
+        "LABEL": "Horários Disponíveis",
+        "ADD": "Adicionar horário"
+      }
+    },
+    "TEAM": {
+      "TITLE": "Agenda da Equipe",
+      "FILTERS": {
+        "AGENT": {
+          "LABEL": "Filtrar por Agente",
+          "PLACEHOLDER": "Todos os Agentes"
+        }
+      }
+    }
+  }
+} 

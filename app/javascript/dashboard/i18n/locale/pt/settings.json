@@ -1,0 +1,595 @@
+{
+  "PROFILE_SETTINGS": {
+    "LINK": "Profile Settings",
+    "TITLE": "Configurações de Perfil",
+    "BTN_TEXT": "Atualizar Perfil",
+    "DELETE_AVATAR": "Eliminar Avatar",
+    "AVATAR_DELETE_SUCCESS": "Avatar eliminado com sucesso",
+    "AVATAR_DELETE_FAILED": "Erro ao eliminar avatar, por favor tente novamente",
+    "UPDATE_SUCCESS": "O seu perfil foi atualizado com sucesso",
+    "PASSWORD_UPDATE_SUCCESS": "A sua palavra-passe foi alterada com sucesso",
+    "AFTER_EMAIL_CHANGED": "O seu perfil foi atualizado com sucesso, por favor faça login novamente pois as suas credenciais de login foram alteradas",
+    "FORM": {
+      "PICTURE": "Foto de Perfil",
+      "AVATAR": "Imagem de Perfil",
+      "ERROR": "Por favor corrija os erros do formulário",
+      "REMOVE_IMAGE": "Remover",
+      "UPLOAD_IMAGE": "Carregar imagem",
+      "UPDATE_IMAGE": "Atualizar imagem",
+      "PROFILE_SECTION": {
+        "TITLE": "Perfil",
+        "NOTE": "O seu endereço de email é a sua identidade e é usado para iniciar sessão."
+      },
+      "SEND_MESSAGE": {
+        "TITLE": "Tecla de atalho para enviar mensagens",
+        "NOTE": "Pode selecionar uma tecla de atalho (Enter ou Cmd/Ctrl+Enter) com base na sua preferência de escrita.",
+        "UPDATE_SUCCESS": "As suas configurações foram atualizadas com sucesso",
+        "CARD": {
+          "ENTER_KEY": {
+            "HEADING": "Enter (↵)",
+            "CONTENT": "Enviar mensagens pressionando a tecla Enter em vez de clicar no botão de enviar."
+          },
+          "CMD_ENTER_KEY": {
+            "HEADING": "Cmd/Ctrl + Enter (⌘ + ↵)",
+            "CONTENT": "Enviar mensagens pressionando Cmd/Ctrl + Enter em vez de clicar no botão de enviar."
+          }
+        }
+      },
+      "MESSAGE_SIGNATURE_SECTION": {
+        "TITLE": "Assinatura de mensagem pessoal",
+        "NOTE": "Crie uma assinatura de mensagem única para aparecer no final de cada mensagem que enviar de qualquer caixa de entrada. Também pode incluir uma imagem inline, que é suportada em chat ao vivo, email e caixas de entrada API.",
+        "BTN_TEXT": "Guardar assinatura de mensagem",
+        "API_ERROR": "Não foi possível guardar a assinatura! Tente novamente",
+        "API_SUCCESS": "Assinatura guardada com sucesso",
+        "IMAGE_UPLOAD_ERROR": "Não foi possível carregar a imagem! Tente novamente",
+        "IMAGE_UPLOAD_SUCCESS": "Imagem adicionada com sucesso. Por favor clique em guardar para salvar a assinatura",
+        "IMAGE_UPLOAD_SIZE_ERROR": "O tamanho da imagem deve ser inferior a {size}MB"
+      },
+      "MESSAGE_SIGNATURE": {
+        "LABEL": "Assinatura de Mensagem",
+        "ERROR": "A assinatura de mensagem não pode estar vazia",
+        "PLACEHOLDER": "Insira aqui a sua assinatura de mensagem pessoal."
+      },
+      "PASSWORD_SECTION": {
+        "TITLE": "Palavra-passe",
+        "NOTE": "Atualizar a sua palavra-passe irá reiniciar as suas sessões em múltiplos dispositivos.",
+        "BTN_TEXT": "Alterar palavra-passe"
+      },
+      "ACCESS_TOKEN": {
+        "TITLE": "Token de Acesso",
+        "NOTE": "Este token pode ser usado se estiver a construir uma integração baseada em API",
+        "COPY": "Copiar"
+      },
+      "AUDIO_NOTIFICATIONS_SECTION": {
+        "TITLE": "Notificações de Áudio",
+        "NOTE": "Ativar notificações de áudio no painel para novas mensagens e conversas.",
+        "ALERT_TYPES": {
+          "NONE": "Nenhum",
+          "MINE": "Atribuído",
+          "ALL": "Todos"
+        },
+        "ALERT_TYPE": {
+          "TITLE": "Eventos de alerta para conversas:",
+          "NONE": "Nenhum",
+          "ASSIGNED": "Conversas Atribuídas",
+          "ALL_CONVERSATIONS": "Todas as Conversas"
+        },
+        "DEFAULT_TONE": {
+          "TITLE": "Tom de alerta:"
+        },
+        "CONDITIONS": {
+          "TITLE": "Condições de alerta:",
+          "CONDITION_ONE": "Enviar alertas de áudio apenas se a janela do navegador não estiver ativa",
+          "CONDITION_TWO": "Enviar alertas a cada 30s até que todas as conversas atribuídas sejam lidas"
+        }
+      },
+      "EMAIL_NOTIFICATIONS_SECTION": {
+        "TITLE": "Notificações por Email",
+        "NOTE": "Atualize as suas preferências de notificação por email aqui",
+        "CONVERSATION_ASSIGNMENT": "Enviar notificações por email quando uma conversa for atribuída a mim",
+        "CONVERSATION_CREATION": "Enviar notificações por email quando uma nova conversa for criada",
+        "CONVERSATION_MENTION": "Enviar notificações por email quando for mencionado numa conversa",
+        "ASSIGNED_CONVERSATION_NEW_MESSAGE": "Enviar notificações por email quando uma nova mensagem for criada numa conversa atribuída",
+        "PARTICIPATING_CONVERSATION_NEW_MESSAGE": "Enviar notificações por email quando uma nova mensagem for criada numa conversa participativa",
+        "SLA_MISSED_FIRST_RESPONSE": "Enviar notificações por email quando uma conversa perder o SLA da primeira resposta",
+        "SLA_MISSED_NEXT_RESPONSE": "Enviar notificações por email quando uma conversa perder o SLA da próxima resposta",
+        "SLA_MISSED_RESOLUTION": "Enviar notificações por email quando uma conversa perder o SLA de resolução"
+      },
+      "NOTIFICATIONS": {
+        "TITLE": "Preferências de notificação",
+        "TYPE_TITLE": "Tipo de notificação",
+        "EMAIL": "Email",
+        "PUSH": "Notificação push",
+        "TYPES": {
+          "CONVERSATION_CREATED": "Uma nova conversa foi criada",
+          "CONVERSATION_ASSIGNED": "Uma conversa foi atribuída a si",
+          "CONVERSATION_MENTION": "Foi mencionado numa conversa",
+          "ASSIGNED_CONVERSATION_NEW_MESSAGE": "Uma nova mensagem foi criada numa conversa atribuída",
+          "PARTICIPATING_CONVERSATION_NEW_MESSAGE": "Uma nova mensagem foi criada numa conversa participativa",
+          "SLA_MISSED_FIRST_RESPONSE": "Uma conversa perdeu o SLA da primeira resposta",
+          "SLA_MISSED_NEXT_RESPONSE": "Uma conversa perdeu o SLA da próxima resposta",
+          "SLA_MISSED_RESOLUTION": "Uma conversa perdeu o SLA de resolução"
+        },
+        "BROWSER_PERMISSION": "Ativar notificações push para o seu navegador para poder recebê-las"
+      },
+      "API": {
+        "UPDATE_SUCCESS": "As suas preferências de notificação foram atualizadas com sucesso",
+        "UPDATE_ERROR": "Erro ao atualizar as preferências, por favor tente novamente"
+      },
+      "PUSH_NOTIFICATIONS_SECTION": {
+        "TITLE": "Notificações Push",
+        "NOTE": "Atualize as suas preferências de notificação push aqui",
+        "CONVERSATION_ASSIGNMENT": "Enviar notificações push quando uma conversa for atribuída a mim",
+        "CONVERSATION_CREATION": "Enviar notificações push quando uma nova conversa for criada",
+        "CONVERSATION_MENTION": "Enviar notificações push quando for mencionado numa conversa",
+        "ASSIGNED_CONVERSATION_NEW_MESSAGE": "Enviar notificações push quando uma nova mensagem for criada numa conversa atribuída",
+        "PARTICIPATING_CONVERSATION_NEW_MESSAGE": "Enviar notificações push quando uma nova mensagem for criada numa conversa participativa",
+        "HAS_ENABLED_PUSH": "Ativou push para este navegador.",
+        "REQUEST_PUSH": "Ativar notificações push",
+        "SLA_MISSED_FIRST_RESPONSE": "Enviar notificações push quando uma conversa perder o SLA da primeira resposta",
+        "SLA_MISSED_NEXT_RESPONSE": "Enviar notificações push quando uma conversa perder o SLA da próxima resposta",
+        "SLA_MISSED_RESOLUTION": "Enviar notificações push quando uma conversa perder o SLA de resolução"
+      },
+      "PROFILE_IMAGE": {
+        "LABEL": "Imagem de Perfil"
+      },
+      "NAME": {
+        "LABEL": "O seu nome completo",
+        "ERROR": "Por favor insira um nome completo válido",
+        "PLACEHOLDER": "Por favor insira o seu nome completo"
+      },
+      "DISPLAY_NAME": {
+        "LABEL": "Nome de exibição",
+        "ERROR": "Por favor insira um nome de exibição válido",
+        "PLACEHOLDER": "Por favor insira um nome de exibição, este será exibido nas conversas"
+      },
+      "AVAILABILITY": {
+        "LABEL": "Disponibilidade",
+        "STATUSES_LIST": [
+          "Online",
+          "Ocupado",
+          "Offline"
+        ],
+        "SET_AVAILABILITY_SUCCESS": "Disponibilidade definida com sucesso",
+        "SET_AVAILABILITY_ERROR": "Não foi possível definir a disponibilidade, por favor tente novamente"
+      },
+      "EMAIL": {
+        "LABEL": "O seu endereço de email",
+        "ERROR": "Por favor insira um endereço de email válido",
+        "PLACEHOLDER": "Por favor insira o seu endereço de email, este será exibido nas conversas"
+      },
+      "CURRENT_PASSWORD": {
+        "LABEL": "Palavra-passe atual",
+        "ERROR": "Por favor insira a palavra-passe atual",
+        "PLACEHOLDER": "Por favor insira a palavra-passe atual"
+      },
+      "PASSWORD": {
+        "LABEL": "Nova palavra-passe",
+        "ERROR": "Por favor insira uma palavra-passe com 6 ou mais caracteres",
+        "PLACEHOLDER": "Por favor insira uma nova palavra-passe"
+      },
+      "PASSWORD_CONFIRMATION": {
+        "LABEL": "Confirmar nova palavra-passe",
+        "ERROR": "A confirmação da palavra-passe deve coincidir com a palavra-passe",
+        "PLACEHOLDER": "Por favor re-insira a sua nova palavra-passe"
+      }
+    }
+  },
+  "SIDEBAR_ITEMS": {
+    "CHANGE_AVAILABILITY_STATUS": "Alterar",
+    "CHANGE_ACCOUNTS": "Mudar de Conta",
+    "CONTACT_SUPPORT": "Contactar Suporte",
+    "SELECTOR_SUBTITLE": "Selecione uma conta da lista seguinte",
+    "PROFILE_SETTINGS": "Configurações de Perfil",
+    "KEYBOARD_SHORTCUTS": "Atalhos de Teclado",
+    "APPEARANCE": "Alterar Aparência",
+    "SUPER_ADMIN_CONSOLE": "Consola de Super Admin",
+    "LOGOUT": "Terminar Sessão"
+  },
+  "APP_GLOBAL": {
+    "TRIAL_MESSAGE": "dias de teste restantes.",
+    "TRAIL_BUTTON": "Comprar Agora",
+    "DELETED_USER": "Utilizador Eliminado",
+    "EMAIL_VERIFICATION_PENDING": "Parece que ainda não verificou o seu endereço de email. Por favor verifique a sua caixa de entrada para o email de verificação.",
+    "RESEND_VERIFICATION_MAIL": "Reenviar email de verificação",
+    "EMAIL_VERIFICATION_SENT": "Email de verificação enviado. Por favor verifique a sua caixa de entrada.",
+    "ACCOUNT_SUSPENDED": {
+      "TITLE": "Conta Suspensa",
+      "MESSAGE": "A sua conta está suspensa. Por favor contacte a equipa de suporte para mais informações."
+    }
+  },
+  "COMPONENTS": {
+    "CODE": {
+      "BUTTON_TEXT": "Copiar",
+      "CODEPEN": "Abrir no CodePen",
+      "COPY_SUCCESSFUL": "Copiado para a área de transferência"
+    },
+    "SHOW_MORE_BLOCK": {
+      "SHOW_MORE": "Mostrar Mais",
+      "SHOW_LESS": "Mostrar Menos"
+    },
+    "FILE_BUBBLE": {
+      "DOWNLOAD": "Descarregar",
+      "UPLOADING": "A carregar...",
+      "INSTAGRAM_STORY_UNAVAILABLE": "Esta história já não está disponível."
+    },
+    "LOCATION_BUBBLE": {
+      "SEE_ON_MAP": "Ver no mapa"
+    },
+    "FORM_BUBBLE": {
+      "SUBMIT": "Submeter"
+    }
+  },
+  "CONFIRM_EMAIL": "A verificar...",
+  "SETTINGS": {
+    "INBOXES": {
+      "NEW_INBOX": "Adicionar Caixa de Entrada"
+    }
+  },
+  "SIDEBAR": {
+    "CURRENTLY_VIEWING_ACCOUNT": "Atualmente a ver:",
+    "SWITCH": "Mudar",
+    "INBOX_VIEW": "Vista da Caixa de Entrada",
+    "CONVERSATIONS": "Conversas",
+    "INBOX": "Caixa de Entrada",
+    "ALL_CONVERSATIONS": "Todas as Conversas",
+    "MENTIONED_CONVERSATIONS": "Menções",
+    "PARTICIPATING_CONVERSATIONS": "Participando",
+    "UNATTENDED_CONVERSATIONS": "Não Atendidas",
+    "REPORTS": "Relatórios",
+    "SETTINGS": "Configurações",
+    "CONTACTS": "Contactos",
+    "CAPTAIN": "Capitão",
+    "HOME": "Início",
+    "AGENTS": "Agentes",
+    "AGENT_BOTS": "Bots",
+    "AUDIT_LOGS": "Registos de Auditoria",
+    "INBOXES": "Caixas de Entrada",
+    "NOTIFICATIONS": "Notificações",
+    "CANNED_RESPONSES": "Respostas Predefinidas",
+    "INTEGRATIONS": "Integrações",
+    "PROFILE_SETTINGS": "Configurações de Perfil",
+    "ACCOUNT_SETTINGS": "Configurações da Conta",
+    "APPLICATIONS": "Aplicações",
+    "LABELS": "Etiquetas",
+    "CUSTOM_ATTRIBUTES": "Atributos Personalizados",
+    "AUTOMATION": "Automação",
+    "MACROS": "Macros",
+    "TEAMS": "Equipas",
+    "BILLING": "Faturação",
+    "CUSTOM_VIEWS_FOLDER": "Pastas",
+    "CUSTOM_VIEWS_SEGMENTS": "Segmentos",
+    "ALL_CONTACTS": "Todos os Contactos",
+    "TAGGED_WITH": "Marcado com",
+    "NEW_LABEL": "Nova etiqueta",
+    "NEW_TEAM": "Nova equipa",
+    "NEW_INBOX": "Nova caixa de entrada",
+    "REPORTS_CONVERSATION": "Conversas",
+    "CSAT": "CSAT",
+    "CAMPAIGNS": "Campanhas",
+    "ONGOING": "Em curso",
+    "ONE_OFF": "Única",
+    "REPORTS_SLA": "SLA",
+    "REPORTS_BOT": "Bot",
+    "REPORTS_AGENT": "Agentes",
+    "REPORTS_LABEL": "Etiquetas",
+    "REPORTS_INBOX": "Caixa de Entrada",
+    "REPORTS_TEAM": "Equipa",
+    "SET_AVAILABILITY_TITLE": "Defina-se como",
+    "SLA": "SLA",
+    "CUSTOM_ROLES": "Funções Personalizadas",
+    "BETA": "Beta",
+    "REPORTS_OVERVIEW": "Visão Geral",
+    "REAUTHORIZE": "A conexão da sua caixa de entrada expirou, por favor reconecte-se para continuar a receber e enviar mensagens",
+    "HELP_CENTER": {
+      "TITLE": "Centro de Ajuda",
+      "ALL_ARTICLES": "Todos os Artigos",
+      "MY_ARTICLES": "Meus Artigos",
+      "DRAFT": "Rascunho",
+      "ARCHIVED": "Arquivado",
+      "CATEGORY": "Categoria",
+      "SETTINGS": "Configurações",
+      "CATEGORY_EMPTY_MESSAGE": "Nenhuma categoria encontrada"
+    },
+    "SET_AUTO_OFFLINE": {
+      "TEXT": "Marcar offline automaticamente",
+      "INFO_TEXT": "Deixe o sistema marcar automaticamente como offline quando não estiver a usar a aplicação ou o painel."
+    },
+    "DOCS": "Ler documentos",
+    "KANBAN_BOARD": "Gestor de Pedidos",
+    "AGENDA": "Agenda",
+    "AGENDA_VIEW": "Visualização",
+    "AGENDA_TEAM": "Equipe",
+    "AGENDA_AVAILABILITY": "Disponibilidade",
+    "AGENDA_SETTINGS": "Configurações"
+  },
+  "BILLING_SETTINGS": {
+    "TITLE": "Faturação",
+    "CURRENT_PLAN": {
+      "TITLE": "Plano Atual",
+      "PLAN_NOTE": "Atualmente está subscrito ao plano **%{plan}** com **%{quantity}** licenças"
+    },
+    "MANAGE_SUBSCRIPTION": {
+      "TITLE": "Gerir a sua subscrição",
+      "DESCRIPTION": "Veja as suas faturas anteriores, edite os seus detalhes de faturação ou cancele a sua subscrição.",
+      "BUTTON_TXT": "Ir para o portal de faturação"
+    },
+    "CHAT_WITH_US": {
+      "TITLE": "Precisa de ajuda?",
+      "DESCRIPTION": "Tem algum problema com a faturação? Estamos aqui para ajudar.",
+      "BUTTON_TXT": "Converse connosco"
+    },
+    "NO_BILLING_USER": "A sua conta de faturação está a ser configurada. Por favor atualize a página e tente novamente."
+  },
+  "CREATE_ACCOUNT": {
+    "NO_ACCOUNT_WARNING": "Oh não! Não conseguimos encontrar nenhuma conta Chatwoot. Por favor crie uma nova conta para continuar.",
+    "NEW_ACCOUNT": "Nova Conta",
+    "SELECTOR_SUBTITLE": "Criar uma nova conta",
+    "API": {
+      "SUCCESS_MESSAGE": "Conta criada com sucesso",
+      "EXIST_MESSAGE": "A conta já existe",
+      "ERROR_MESSAGE": "Não foi possível conectar ao servidor Woot, por favor tente novamente mais tarde"
+    },
+    "FORM": {
+      "NAME": {
+        "LABEL": "Nome da Empresa",
+        "PLACEHOLDER": "Wayne Enterprises"
+      },
+      "SUBMIT": "Submeter"
+    }
+  },
+  "KEYBOARD_SHORTCUTS": {
+    "TOGGLE_MODAL": "Ver todos os atalhos",
+    "TITLE": {
+      "OPEN_CONVERSATION": "Abrir conversa",
+      "RESOLVE_AND_NEXT": "Resolver e passar para a próxima",
+      "NAVIGATE_DROPDOWN": "Navegar pelos itens do dropdown",
+      "RESOLVE_CONVERSATION": "Resolver Conversa",
+      "GO_TO_CONVERSATION_DASHBOARD": "Ir para o Painel de Conversas",
+      "ADD_ATTACHMENT": "Adicionar Anexo",
+      "GO_TO_CONTACTS_DASHBOARD": "Ir para o Painel de Contactos",
+      "TOGGLE_SIDEBAR": "Alternar Barra Lateral",
+      "GO_TO_REPORTS_SIDEBAR": "Ir para a barra lateral de Relatórios",
+      "MOVE_TO_NEXT_TAB": "Mover para o próximo separador na lista de conversas",
+      "GO_TO_SETTINGS": "Ir para Configurações",
+      "SWITCH_TO_PRIVATE_NOTE": "Mudar para Nota Privada",
+      "SWITCH_TO_REPLY": "Mudar para Resposta",
+      "TOGGLE_SNOOZE_DROPDOWN": "Alternar dropdown de soneca"
+    },
+    "KEYS": {
+      "WINDOWS_KEY_AND_COMMAND_KEY": "Win / ⌘",
+      "ALT_OR_OPTION_KEY": "Alt / ⌥",
+      "FORWARD_SLASH_KEY": "/"
+    }
+  },
+  "SUPER_ADMIN": {
+    "SETTINGS_POPUP": {
+      "TITLE": "Configuração Kanban",
+      "SUBTITLE": "Configurar opções globais do Order Manager",
+      "BASIC_SETTINGS": "Configurações básicas",
+      "WEBHOOK_SETTINGS": "Webhook global",
+      "AUTOMATION_SETTINGS": "Automação",
+      "SAVE_SUCCESS": "Configuração Kanban salva com sucesso",
+      "SAVE_ERROR": "Erro ao salvar as configurações do Kanban",
+      "MESSAGE_TEMPLATES": {
+        "MESSAGE_TEMPLATES": "Modelos de mensagens",
+        "PERSONALIZE": "Personalizar",
+        "ADVANCED": "Avançado",
+        "HELP": "Ajuda"
+      },
+      "SAVE_BUTTON": "Manter",
+      "CONFIRM_DIALOG": "Existem alterações não salvas. ",
+      "CONFIRM_CLOSE": "Sim, vá embora",
+      "CANCEL_CLOSE": "Não, continue editando"
+    },
+    "KANBAN_BOARD": {
+      "TAB_BUTTON": {
+        "TIME_TRACKING": "Rastreio de tempo",
+        "FUNNELS": "Funis",
+        "QUICK_REPLY": "Resposta rápida",
+        "SELECTED_FUNNEL": "Selecione um funil"
+      },
+      "TAB_INFO": {
+        "KANBAN": {
+          "TITLE": "Gerenciamento de pedidos",
+          "SUBTITLE": "Gerencie suas conversas de forma eficiente com o Kanban."
+        },
+        "TIME-TRACKING": {
+          "TITLE": "Rastreio de tempo",
+          "SUBTITLE": "Acompanhe o tempo gasto em cada etapa do processo."
+        },
+        "FUNNELS": {
+          "TITLE": "Funis",
+          "SUBTITLE": "Visualize e gerencie seus funis de vendas."
+        },
+        "SETTINGS": {
+          "TITLE": "Configurações",
+          "SUBTITLE": "Personalize suas opções Kanban."
+        }
+      }
+    },
+    "TIME-TRACKING": {
+      "TIME-TRACKING": "Rastreio de tempo",
+      "NO-DATA": "Não há dados de controle de tempo disponíveis.",
+      "TIME-TRACKING-TABLE": {
+        "REQUEST": "Ordem",
+        "CONFIRMATION": "Aguardando confirmação",
+        "WAIT-READY": "Em preparação",
+        "READY": "Pronto para entrega",
+        "SEND": "No caminho",
+        "TIME": "Tempo total",
+        "RESET-BUTTON": "Limpar dados de tempo"
+      }
+    },
+    "FUNNELS_MANAGER": {
+      "FUNNELS-TITLE": "Gerenciador de funil",
+      "DESCRIPTION": "Gerencie funis de atendimento para organizar o fluxo de pedidos.",
+      "LOADING": "Carregando funis...",
+      "NO-FUNNELS": "Nenhum funil foi encontrado.",
+      "EDIT": "Editar",
+      "TRASH": "Eliminar",
+      "ADD-FUNNEL-BUTTON": "Adicionar novo funil"
+    },
+    "KANBAN_ACTION": {
+      "TITLE": "Funil",
+      "HEADER_TITLE": "Selecione funil",
+      "HEADER_CONTENT": "Escolha um funil e um palco para esta conversa",
+      "FUNNEL_BUTTON": "Definir funil",
+      "METRIC_VALUE": "Tempo nesta fase",
+      "STAGE_HISTORY": "Histórico",
+      "NEXT_STAGE": "Próxima etapa sugerida",
+      "FUNNEL_LIST": "Selecione o funil",
+      "STAGE_LIST": "Selecione um estágio",
+      "CANCEL": "Cancelar",
+      "SAVE": "Manter",
+      "DETAILS_BUTTON": "Detalhes do item"
+    },
+    "MESSAGE_TEMPLATE": {
+      "SETTINGS_TITLE": "Modelos de mensagens",
+      "ADD_TEMPLATE_BUTTON": "Adicionar novo modelo",
+      "EDIT_BUTTON": "Editar",
+      "DELETE_BUTTON": "Eliminar",
+      "TEMPLATE_NAME": "Nome do modelo",
+      "TEMPLATE_NAME_PLACEHOLDER": "Ex: confirmação do pedido",
+      "TEMPLATE_CONTENT": "Conteúdo da mensagem",
+      "TEMPLATE_CONTENT_PLACEHOLDER": "Digite o conteúdo da mensagem aqui...",
+      "TEMPLATE_FUNNEL": "Funil",
+      "SELECT_FUNNEL": "Selecione um funil",
+      "TEMPLATE_STAGE": "Estágio de funil",
+      "SELECT_STAGE": "Selecione um estágio",
+      "TEMPLATE_ICON": "Ícone de modelo",
+      "SELECTED_ICON": "Ícone selecionado",
+      "SELECT_ICON": "Clique para selecionar um ícone",
+      "CHECKBOX_TEXT": "Definir como modelo mestre deste estágio",
+      "HELPER_TEXT": "Quando marcado, este modelo será usado automaticamente ao mover pedidos para esta etapa",
+      "BTN_CANCEL": "Cancelar",
+      "BTN_SAVE": "Manter"
+    },
+    "PERSONALIZE_SETTINGS": {
+      "SETTINGS_TITLE": "Personalizar tema",
+      "SETTINGS_FLAG": "Você deve recarregar a página para ver as alterações.",
+      "THEME_TITLE": "Cor do tema",
+      "THEME_DESCRIPTION": "Tema colorido e vibrante",
+      "THEME_LABEL": "Cor",
+      "COLOR_PREVIEW": "Escolha a cor personalizada",
+      "THEME_OPTION": {
+        "THEME_TITLE": "Tema claro",
+        "THEME_DESCRIPTION": "Tema claro e minimalista.",
+        "THEME_LABEL": "luz"
+      }
+    },
+    "ADVANCED_SETTINGS": {
+      "ADVANCED_SETTINGS": "Configurações avançadas",
+      "SETTINGS_SECTION": "Configuração de webhook",
+      "CHECKBOX_LABEL": {
+        "CHECKBOX_TEXT": "Eventos Globais",
+        "HELPER_TEXT": "Receba notificações de eventos kanban globais (mudanças de configuração, atualizações do sistema)"
+      },
+      "CHECKBOX_GROUP": {
+        "CHECKBOX_TEXT": "Eventos de itens",
+        "HELPER_TEXT": "Receba notificações de eventos relacionados aos itens (mudança, atualização, conclusão)"
+      }
+    },
+    "ORDER_DETAILS": {
+      "CONVERSATION": {
+        "TITLE": "Vá para o bate-papo"
+      },
+      "CUSTOMIZE_MODE_1": "Fechar Personalização",
+      "CUSTOMIZE_MODE_2": "Personalizar",
+      "EMPTY_STATE": {
+        "EMPTY_TITLE": "Nenhuma informação disponível",
+        "EMPTY_DESCRIPTION": "Este artigo ainda não possui informações cadastradas.",
+        "CUSTOMIZE_MODE_3": "Clique no botão editar para começar a personalizar.",
+        "EMPTY_ACTION_BUTTON": "Personalizar item"
+      },
+      "SUCCESS_BUTTON_1": "Salvar personalização",
+      "SUCCESS_BUTTON_2": "Salvar pedido",
+      "ADD_BLOCK": "Novo bloco"
+    },
+    "CUSTOMIZE_MODE": {
+      "HEADER_TITLE": "Personalizar campos",
+      "ADD_BLOCK_BUTTON": "Novo bloco",
+      "EMPTY_STATE": "Nenhum bloco foi criado",
+      "ADD_FIRST_BLOCK": "Crie o primeiro bloco"
+    },
+    "CUSTOMIZE_BLOCK": {
+      "LOCAL_BLOCK_PLACEHOLDER": "Nome do bloco",
+      "FIELD_LABEL": "Nome do campo",
+      "FIELD_TYPE": {
+        "TEXT": "Texto",
+        "NUMBER": "Número",
+        "SELECT": "Seleção",
+        "DATE": "Data",
+        "CHECKBOX": "caixa de seleção"
+      },
+      "ADD_FIELD_BUTTON": "Adicionar campo"
+    },
+    "HELP_SETTINGS": {
+      "SETTINGS_TITLE": "Ajuda e suporte",
+      "FAQ_SECTION": "Perguntas frequentes",
+      "TUTORIALS_SECTION": "Tutoriais rápidos",
+      "SUPPORT_SECTION": "Contate o suporte",
+      "SUPPORT_SECTION_DESCRIPTION": "Se você não encontrou a resposta que procurava, entre em contato com nossa equipe de suporte:",
+      "SUPPORT_EMAIL": "E-mail:",
+      "SUPPORT_PHONE": "Telefone:",
+      "SUPPORT_CHAT": {
+        "TITLE": "Bate-papo ao vivo:",
+        "ENABLED": "Disponível",
+        "DISABLED": "Desabilitado"
+      },
+      "FAQS": {
+        "QUESTION_1": "Como adicionar um novo pedido ao Kanban?",
+        "ANSWER_1": "Para adicionar um novo pedido, clique no botão 'Novo pedido' no canto superior direito da tela. ",
+        "QUESTION_2": "Como personalizar colunas Kanban?",
+        "ANSWER_2": "Vá para a guia 'Kanban' nas configurações. ",
+        "QUESTION_3": "Como usar modelos de mensagens?",
+        "ANSWER_3": "Na aba 'Modelos de mensagem' nas configurações, você pode criar modelos predefinidos para cada etapa do processo. "
+      },
+      "TUTORIALS": {
+        "TITLE_1": "Configurando seu primeiro fluxo de trabalho",
+        "CONTENT_1": {
+          "CONTENT_1": "Acesse as configurações do Kanban",
+          "CONTENT_2": "Defina suas colunas de acordo com seu processo",
+          "CONTENT_3": "Defina tempos estimados para cada etapa",
+          "CONTENT_4": "Crie modelos de mensagens para cada etapa",
+          "CONTENT_5": "Salve suas configurações e comece a usar!"
+        },
+        "TITLE_2": "Otimização do Atendimento ao Cliente",
+        "CONTENT_2": {
+          "CONTENT_1": "Use tags para categorizar pedidos",
+          "CONTENT_2": "Configure notificações para pedidos atrasados",
+          "CONTENT_3": "Use o recurso de resposta rápida para mensagens comuns",
+          "CONTENT_4": "Analise as métricas do painel para identificar gargalos"
+        }
+      }
+    },
+    "FUNNEL_POPUP": {
+      "EDIT_FUNNEL": "Editar funil",
+      "ADD_FUNNEL": "Adicionar novo funil",
+      "DESCRIPTION": "Configure os estágios do funil de serviço para organizar melhor o fluxo de pedidos.",
+      "PLACEHOLDER": "Nome do Funil",
+      "STAGES_SELECTION": {
+        "TITLE": "Selecione e ordene as etapas do funil:",
+        "HELPER_TEXT": "Arraste os estágios para reordenar. ",
+        "COLOR_PICKER": "Alterar a cor do palco",
+        "COLOR_SELECT": "Selecione a cor"
+      },
+      "STAGE_OPTIONS": {
+        "HELPER_TEXT": "Digite o nome da etapa e pressione Enter para adicionar:",
+        "PLACEHOLDER": "Digite o nome da etapa...",
+        "ADD_CUSTOM_STAGE": "Adicionar"
+      },
+      "SAVE_BUTTON": "Manter",
+      "CANCEL_BUTTON": "Cancelar",
+      "SUGGESTED_STAGES": {
+        "NEW": "Novo pedido",
+        "ANALIZE": "Em análise",
+        "CHECK": "Em preparação",
+        "READY": "Pronto para entrega",
+        "SEND": "A caminho",
+        "OK": "Entregue",
+        "FINISH": "Finalizado"
+      }
+    }
+  }
+}

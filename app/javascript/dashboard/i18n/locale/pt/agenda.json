@@ -1,0 +1,28 @@
+{
+  "AGENDA": {
+    "TITLE": "Agenda",
+    "TEAM": {
+      "TITLE": "Equipe",
+      "EMPTY": "Nenhum membro da equipe encontrado",
+      "FILTERS": {
+        "AGENT": {
+          "LABEL": "Filtrar por Agente",
+          "PLACEHOLDER": "Todos os Agentes"
+        },
+        "PERIOD": {
+          "LABEL": "Período",
+          "TODAY": "Hoje",
+          "WEEK": "Esta Semana",
+          "MONTH": "Este Mês"
+        },
+        "NO_RESULTS": "Nenhum agente encontrado com os filtros selecionados"
+      },
+      "STATUS": {
+        "ONLINE": "Online",
+        "OFFLINE": "Offline",
+        "BUSY": "Ocupado",
+        "AWAY": "Ausente"
+      }
+    }
+  }
+} 

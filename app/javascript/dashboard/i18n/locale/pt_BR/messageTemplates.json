@@ -1,0 +1,16 @@
+{
+  "TEMPLATES": {
+    "FORM": {
+      "NAME": {
+        "ERROR": "Nome do modelo é obrigatório"
+      },
+      "CONTENT": {
+        "ERROR": "Conteúdo do modelo é obrigatório"
+      },
+      "FUNNEL_STAGE": {
+        "ERROR": "Etapa do funil é obrigatória",
+        "BLANK": "Etapa do funil não pode ficar em branco"
+      }
+    }
+  }
+}

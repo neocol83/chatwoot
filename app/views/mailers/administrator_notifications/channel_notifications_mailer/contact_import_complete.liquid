@@ -1,0 +1,17 @@
+<p>Hola,</p>
+
+<p>La importación de tus contactos se ha completado. Consulte la pestaña de contactos para ver los contactos importados.</p>
+
+<p>Número de registros importados: {{meta['imported_contacts']}}</p>
+
+<p>Número de registros fallidos: {{meta['failed_contacts']}}</p>
+
+{% if meta['failed_contacts'] == 0 %}
+  <p>
+    Haga clic <a href="{{action_url}}">aquí</a> para ver los contactos importados.
+  </p>
+{% else %}
+  <p>
+  Haga clic <a href="{{ action_url }}" target="_blank">aquí</a> para ver los registros fallidos.
+  </p>
+{% endif %}
