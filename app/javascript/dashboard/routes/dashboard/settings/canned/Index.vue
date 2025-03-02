@@ -213,6 +213,7 @@ const confirmDeletion = () => {
         :id="activeResponse.id"
         :edshort-code="activeResponse.short_code"
         :edcontent="activeResponse.content"
+        :ed-file-path="activeResponse.file_path"
         :on-close="hideEditPopup"
       />
     </woot-modal>

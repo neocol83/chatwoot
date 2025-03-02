@@ -743,11 +743,56 @@ export default {
       });
       this.hideWhatsappTemplatesModal();
     },
-    replaceText(message) {
+    async attachCannedResponseFile(filePath) {
+      try {
+        const response = await fetch(filePath); // Fetch the file from the server
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const blob = await response.blob(); // Get the file as a Blob
+        const fileName = filePath.substring(filePath.lastIndexOf('/') + 1); // Extract filename from path
+        const file = new File([blob], fileName, { type: blob.type }); // Create a File object
+
+        console.log('File object being passed to onFileUpload:', file);
+        this.onFileUpload({
+          file: file,
+          name: fileName,
+          type: blob.type,
+          size: blob.size,
+        });
+      } catch (error) {
+        console.error('Error fetching and attaching canned response file:', error);
+        useAlert(this.$t('CANNED_MGMT.ADD.API.FILE_ATTACH_ERROR')); // Or a more generic error message
+      }
+    },
+    replaceText(cannedResponse) {
+      console.log('replaceText function CALLED con cannedResponse:', cannedResponse); // NUEVO LOG: Ver si se llama a replaceText y qué recibe
+
+      let content = '';
+      let filePath = null;
+
+      // Check if cannedResponse is an object with content and file_path
+      if (typeof cannedResponse === 'object' && cannedResponse !== null && cannedResponse.content) {
+        content = cannedResponse.content;
+        filePath = cannedResponse.file_path; // Get file_path from the object if available
+      } else if (typeof cannedResponse === 'string') {
+        // If cannedResponse is just a string (from CannedResponse via MentionBox), use it as content
+        content = cannedResponse;
+      } else {
+        // Handle cases where cannedResponse is unexpected (optional, for robustness)
+        console.warn('Unexpected cannedResponse format:', cannedResponse);
+        return; // Exit if format is not recognized
+      }
+
+      if (filePath) {
+        console.log('filePath is AVAILABLE en replaceText:', filePath); // NUEVO LOG: Verificar si filePath está disponible
+        this.attachCannedResponseFile(filePath);
+      } else {
+        console.log('filePath is NOT AVAILABLE en replaceText'); // NUEVO LOG: Verificar si filePath NO está disponible
+      }
+
+      let message = content; // Use the extracted content
       if (this.sendWithSignature && !this.private) {
-        // if signature is enabled, append it to the message
-        // appendSignature ensures that the signature is not duplicated
-        // so we don't need to check if the signature is already present
         message = appendSignature(message, this.signatureToApply);
       }
 
@@ -894,16 +939,19 @@ export default {
     },
     attachFile({ blob, file }) {
       const reader = new FileReader();
-      reader.readAsDataURL(file.file);
+      reader.readAsDataURL(file.file); // **¡IMPORTANTE! Esta línea FALTABA en mi respuesta anterior, es NECESARIA.**
       reader.onloadend = () => {
-        this.attachedFiles.push({
+        const attachmentObject = { // Crear un objeto temporal para loguear
           currentChatId: this.currentChat.id,
           resource: blob || file,
           isPrivate: this.isPrivate,
           thumb: reader.result,
           blobSignedId: blob ? blob.signed_id : undefined,
           isRecordedAudio: file?.isRecordedAudio || false,
-        });
+        };
+        console.log('Attachment object being added to attachedFiles (attachFile in ReplyBox.vue):', attachmentObject); // Log del objeto antes de añadirlo
+        this.attachedFiles.push(attachmentObject);
+        console.log('attachedFiles in ReplyBox.vue after adding:', this.attachedFiles); // Log de attachedFiles completo después de añadir
       };
     },
     removeAttachment(attachments) {

@@ -8,8 +8,8 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  account_id :integer          not null
+#  file_path  :string           # <= Nueva columna agregada
 #
-
 class CannedResponse < ApplicationRecord
   validates :content, presence: true
   validates :short_code, presence: true

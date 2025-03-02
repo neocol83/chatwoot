@@ -35,6 +35,7 @@ export default {
         message: '',
       },
       show: true,
+      selectedFile: null, // Nueva propiedad para almacenar el archivo seleccionado
     };
   },
   validations: {
@@ -50,17 +51,29 @@ export default {
     resetForm() {
       this.shortCode = '';
       this.content = '';
+      this.selectedFile = null; // Limpiar el archivo seleccionado al resetear el formulario
       this.v$.shortCode.$reset();
       this.v$.content.$reset();
+    },
+    handleFileUpload(event) {
+      this.selectedFile = event.target.files[0]; // Guardar el primer archivo seleccionado
     },
     addCannedResponse() {
       // Show loading on button
       this.addCanned.showLoading = true;
       // Make API Calls
+      const formData = new FormData(); // Usar FormData para enviar archivos
+      formData.append('canned_response[short_code]', this.shortCode);
+      formData.append('canned_response[content]', this.content);
+      if (this.selectedFile) {
+        formData.append('canned_response[canned_file]', this.selectedFile); // Agregar el archivo al FormData
+      }
+
       this.$store
-        .dispatch('createCannedResponse', {
-          short_code: this.shortCode,
-          content: this.content,
+        .dispatch('createCannedResponse', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data', // Indicar que se envían datos multipart/form-data
+          },
         })
         .then(() => {
           // Reset Form, Show success message
@@ -116,6 +129,18 @@ export default {
             />
           </div>
         </div>
+
+        <div class="w-full mt-4">
+          <label>
+            {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.LABEL') }} <input
+              type="file"
+              @change="handleFileUpload"
+            />
+          </label>
+          <p v-if="selectedFile">
+            {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.SELECTED_FILE') }}: {{ selectedFile.name }} </p>
+        </div>
+
         <div class="flex flex-row justify-end w-full gap-2 px-0 py-2">
           <WootSubmitButton
             :disabled="
