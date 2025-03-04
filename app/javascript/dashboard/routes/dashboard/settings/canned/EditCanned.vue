@@ -122,7 +122,7 @@ export default {
 
         <div v-if="currentFilePath" class="w-full mt-4">
           <p>{{ $t('CANNED_MGMT.EDIT.FORM.ATTACHED_FILE.LABEL') }}</p>
-          <div class="flex items-center justify-between p-2 border rounded-md bg-slate-50">
+          <div class="flex items-center justify-between border rounded-md" style="padding-left: 8px; padding-right: 8px;">
             <span>{{ getFileNameFromPath(currentFilePath) }}</span>
             <button class="button clear secondary" @click.prevent="removeAttachedFile">
               {{ $t('CANNED_MGMT.EDIT.FORM.ATTACHED_FILE.REMOVE_BUTTON') }}

@@ -21,6 +21,9 @@
       "DESC": "Las Respuestas Predefinidas son plantillas de respuesta predefinidas que se pueden usar para enviar rápidamente respuestas a las conversaciones.",
       "CANCEL_BUTTON_TEXT": "Cancelar",
       "FORM": {
+        "FILE_UPLOAD": {
+          "LABEL": "Archivo"
+        },        
         "SHORT_CODE": {
           "LABEL": "Código corto",
           "PLACEHOLDER": "Por favor, introduce un código corto.",
@@ -42,6 +45,13 @@
       "TITLE": "Editar respuesta predefinida",
       "CANCEL_BUTTON_TEXT": "Cancelar",
       "FORM": {
+        "ATTACHED_FILE": {
+          "LABEL": "Archivo adjunto a esta respuesta predefinida",
+          "REMOVE_BUTTON": "X"
+        },
+        "UPLOAD_NEW_FILE": {
+          "LABEL": "Seleccionar un nuevo archivo"
+        },
         "SHORT_CODE": {
           "LABEL": "Código corto",
           "PLACEHOLDER": "Por favor, introduce un código corto.",

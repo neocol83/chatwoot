@@ -21,6 +21,9 @@
       "DESC": "Canned Responses are predefined reply templates which can be used to quickly send out replies to conversations.",
       "CANCEL_BUTTON_TEXT": "Cancel",
       "FORM": {
+        "FILE_UPLOAD": {
+          "LABEL": "Seleccionar un archivo"
+        },
         "SHORT_CODE": {
           "LABEL": "Short code",
           "PLACEHOLDER": "Please enter a short code.",

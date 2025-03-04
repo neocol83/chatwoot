@@ -133,16 +133,19 @@ export default {
           </div>
         </div>
 
-        <div class="w-full mt-4">
-          <label>  {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.LABEL') }}
+        <div class="w-full">
+          <label> 
+            <p>
+              {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.LABEL') }}
+            </p>            
             <input  type="file"
               accept="image/*,application/pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt"
               @change="handleFileChange"
             />
           </label>
-          <p v-if="cannedFile">
-            {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.SELECTED_FILE') }}: {{ cannedFile.name }}
-          </p>
+          <!-- <p v-if="cannedFile">
+            {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.SELECTED_FILE') }}: {{ cannedFile.name }} 
+          </p> -->
         </div>
 
         <div class="flex flex-row justify-end w-full gap-2 px-0 py-2">
