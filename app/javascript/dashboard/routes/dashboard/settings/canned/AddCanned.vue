@@ -12,6 +12,7 @@ export default {
     WootSubmitButton,
     Modal,
     WootMessageEditor,
+    // ¡ELIMINAMOS WootFileUpload de components!
   },
   props: {
     responseContent: {
@@ -35,6 +36,8 @@ export default {
         message: '',
       },
       show: true,
+      cannedFile: null, // Usamos cannedFile
+      // ¡ELIMINAMOS fileInput ref, ya no es necesario!
     };
   },
   validations: {
@@ -50,31 +53,44 @@ export default {
     resetForm() {
       this.shortCode = '';
       this.content = '';
+      this.cannedFile = null;
       this.v$.shortCode.$reset();
       this.v$.content.$reset();
     },
+    handleFileChange(event) {
+      this.cannedFile = event.target.files[0]; // Guardar el archivo en cannedFile
+    },
     addCannedResponse() {
-      // Show loading on button
-      this.addCanned.showLoading = true;
-      // Make API Calls
-      this.$store
-        .dispatch('createCannedResponse', {
-          short_code: this.shortCode,
-          content: this.content,
-        })
+      const vm = this;
+      vm.addCanned.showLoading = true;
+
+      const formData = new FormData();
+      formData.append('canned_response[short_code]', this.shortCode);
+      formData.append('canned_response[content]', this.content);
+      if (this.cannedFile) {
+        formData.append('canned_response[canned_file]', this.cannedFile);
+      }
+
+      this.$store.dispatch('createCannedResponse', formData, { // Usamos this.$store.dispatch
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
         .then(() => {
-          // Reset Form, Show success message
-          this.addCanned.showLoading = false;
-          useAlert(this.$t('CANNED_MGMT.ADD.API.SUCCESS_MESSAGE'));
-          this.resetForm();
-          this.onClose();
+          vm.addCanned.showLoading = false;
+          useAlert(vm.$t('CANNED_MGMT.ADD.API.SUCCESS_MESSAGE'));
+          vm.resetForm();
+          vm.onClose();
         })
         .catch(error => {
-          this.addCanned.showLoading = false;
+          vm.addCanned.showLoading = false;
           const errorMessage =
-            error?.message || this.$t('CANNED_MGMT.ADD.API.ERROR_MESSAGE');
+            error?.message || vm.$t('CANNED_MGMT.ADD.API.ERROR_MESSAGE');
           useAlert(errorMessage);
         });
+    },
+    onDialogClose() {
+      this.onClose();
     },
   },
 };
@@ -116,6 +132,19 @@ export default {
             />
           </div>
         </div>
+
+        <div class="w-full mt-4">
+          <label>  {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.LABEL') }}
+            <input  type="file"
+              accept="image/*,application/pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt"
+              @change="handleFileChange"
+            />
+          </label>
+          <p v-if="cannedFile">
+            {{ $t('CANNED_MGMT.ADD.FORM.FILE_UPLOAD.SELECTED_FILE') }}: {{ cannedFile.name }}
+          </p>
+        </div>
+
         <div class="flex flex-row justify-end w-full gap-2 px-0 py-2">
           <WootSubmitButton
             :disabled="

@@ -51,8 +51,8 @@ const fetchCannedResponses = async () => {
 };
 
 onMounted(() => {
-  fetchCannedResponses();
-});
+        fetchCannedResponses();
+    });
 
 const showAlertMessage = message => {
   loading[activeResponse.value.id] = false;
@@ -213,6 +213,7 @@ const confirmDeletion = () => {
         :id="activeResponse.id"
         :edshort-code="activeResponse.short_code"
         :edcontent="activeResponse.content"
+        :edFilePath="activeResponse.file_path"
         :on-close="hideEditPopup"
       />
     </woot-modal>

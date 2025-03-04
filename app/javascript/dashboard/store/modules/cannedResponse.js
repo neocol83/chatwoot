@@ -65,7 +65,7 @@ const actions = {
 
   updateCannedResponse: async function updateCannedResponse(
     { commit },
-    { id, ...updateObj }
+    { id, updateObj }
   ) {
     commit(types.default.SET_CANNED_UI_FLAG, { updatingItem: true });
     try {

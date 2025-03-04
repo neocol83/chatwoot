@@ -35,7 +35,11 @@ export default {
       this.$store.dispatch('getCannedResponse', { searchKey: this.searchKey });
     },
     handleMentionClick(item = {}) {
-      this.$emit('click', item.description);
+      // Buscar el cannedMessage completo que corresponde al item seleccionado
+      const selectedCannedMessage = this.cannedMessages.find(
+        (cannedMessage) => cannedMessage.short_code === item.key
+      );
+      this.$emit('click', selectedCannedMessage); // MODIFICADO: Emitir el objeto cannedMessage completo
     },
   },
 };
