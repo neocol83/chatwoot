@@ -745,41 +745,29 @@ export default {
     },
     async attachCannedResponseFile(filePath) {
       try {
-        const response = await fetch(filePath); // Fetch the file from the server
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const blob = await response.blob(); // Get the file as a Blob
-        const fileName = filePath.substring(filePath.lastIndexOf('/') + 1); // Extract filename from path
-        const file = new File([blob], fileName, { type: blob.type }); // Create a File object
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+        const blob = await response.blob();
         this.onFileUpload({
-          file: file,
-          name: fileName,
+          file: new File([blob], filePath.split('/').pop(), { type: blob.type }),
+          name: filePath.split('/').pop(),
           type: blob.type,
           size: blob.size,
         });
-      } catch (error) {
-        useAlert(this.$t('CANNED_MGMT.ADD.API.FILE_ATTACH_ERROR')); // Or a more generic error message
+      } catch {
+        useAlert(this.$t('CANNED_MGMT.ADD.API.FILE_ATTACH_ERROR'));
       }
     },
     replaceText(cannedResponse) {
-      let content = '';
-      let filePath = null;
 
-      if (typeof cannedResponse === 'object' && cannedResponse !== null && cannedResponse.content) {
-        content = cannedResponse.content;
-        filePath = cannedResponse.file_path;
-      } else if (typeof cannedResponse === 'string') {
-        content = cannedResponse;
-      } else {
-        return; // Salir si el formato no es válido
+      if (!cannedResponse) return;
+      let message = cannedResponse.description || '';
+
+      if (cannedResponse.file_path) {
+        this.attachCannedResponseFile(cannedResponse.file_path);
       }
 
-      if (filePath) {
-        this.attachCannedResponseFile(filePath);
-      }
-
-      let message = content;
       if (this.sendWithSignature && !this.private) {
         message = appendSignature(message, this.signatureToApply);
       }
@@ -927,17 +915,16 @@ export default {
     },
     attachFile({ blob, file }) {
       const reader = new FileReader();
-      reader.readAsDataURL(file.file); // **¡IMPORTANTE! Esta línea FALTABA en mi respuesta anterior, es NECESARIA.**
+      reader.readAsDataURL(file.file);
       reader.onloadend = () => {
-        const attachmentObject = { // Crear un objeto temporal para loguear
+        this.attachedFiles.push({
           currentChatId: this.currentChat.id,
           resource: blob || file,
           isPrivate: this.isPrivate,
           thumb: reader.result,
           blobSignedId: blob ? blob.signed_id : undefined,
           isRecordedAudio: file?.isRecordedAudio || false,
-        };
-        this.attachedFiles.push(attachmentObject);
+        });
       };
     },
     removeAttachment(attachments) {

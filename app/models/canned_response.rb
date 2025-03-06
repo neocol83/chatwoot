@@ -34,12 +34,4 @@ class CannedResponse < ApplicationRecord
 
     Rails.application.routes.url_helpers.rails_blob_url(canned_file, only_path: true)
   end
-
-  # Método para actualizar el archivo adjunto
-  def update_canned_file(new_file)
-    return unless new_file.present?
-
-    canned_file.purge_later if canned_file.attached? # Eliminar archivo anterior si existe
-    canned_file.attach(new_file) # Adjuntar nuevo archivo
-  end
 end

@@ -19,6 +19,7 @@ export default {
         label: cannedMessage.short_code,
         key: cannedMessage.short_code,
         description: cannedMessage.content,
+        file_path: cannedMessage.file_path
       }));
     },
   },
@@ -36,10 +37,10 @@ export default {
     },
     handleMentionClick(item = {}) {
       // Buscar el cannedMessage completo que corresponde al item seleccionado
-      const selectedCannedMessage = this.cannedMessages.find(
+      /*const selectedCannedMessage = this.cannedMessages.find(
         (cannedMessage) => cannedMessage.short_code === item.key
-      );
-      this.$emit('click', selectedCannedMessage); // MODIFICADO: Emitir el objeto cannedMessage completo
+      );*/
+      this.$emit('click', item); // MODIFICADO: Emitir el objeto cannedMessage completo
     },
   },
 };

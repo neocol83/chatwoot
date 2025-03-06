@@ -12,7 +12,7 @@ class Api::V1::Accounts::CannedResponsesController < Api::V1::Accounts::BaseCont
   def create
     @canned_response = Current.account.canned_responses.new(canned_response_params)
 
-    if params.dig(:canned_response, :canned_file).present?
+    if params[:canned_response][:canned_file].present?
       @canned_response.canned_file.attach(params[:canned_response][:canned_file])
     end
 
@@ -21,34 +21,26 @@ class Api::V1::Accounts::CannedResponsesController < Api::V1::Accounts::BaseCont
   end
 
   def update
-    @canned_response = CannedResponse.find(params[:id])
-  
+    @canned_response = CannedResponse.find(params[:id])  
     # Eliminamos el archivo si se solicita
     if params[:canned_response][:delete_canned_file] == "true" && @canned_response.canned_file.attached?
       @canned_response.canned_file.purge_later
-    end
-  
+    end  
     # Adjuntamos un nuevo archivo si es necesario
     if params[:canned_response][:canned_file].present?
       @canned_response.canned_file.purge_later if @canned_response.canned_file.attached?
       @canned_response.canned_file.attach(params[:canned_response][:canned_file])
-    end
-  
+    end  
     # Actualizamos los demás atributos
-    if @canned_response.update!(canned_response_params)
-      render json: @canned_response.as_json(methods: :file_path)
-    else
-      render json: @canned_response.errors, status: :unprocessable_entity
-    end
+    @canned_response.update!(canned_response_params)
+    render json: @canned_response.as_json(methods: :file_path)
   end 
 
   def destroy
-    @canned_response = CannedResponse.find(params[:id])
-  
+    @canned_response = CannedResponse.find(params[:id])  
     # Eliminamos el archivo adjunto si existe
     @canned_response.canned_file.purge_later if @canned_response.canned_file.attached?
-  
-    # Eliminamos la respuesta rápida
+
     @canned_response.destroy!
     head :ok
   end

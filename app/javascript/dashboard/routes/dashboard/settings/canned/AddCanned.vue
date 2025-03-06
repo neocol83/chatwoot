@@ -61,36 +61,29 @@ export default {
       this.cannedFile = event.target.files[0]; // Guardar el archivo en cannedFile
     },
     addCannedResponse() {
-      const vm = this;
-      vm.addCanned.showLoading = true;
-
+      // Show loading on button
+      this.addCanned.showLoading = true;
+      // Make API Calls
       const formData = new FormData();
       formData.append('canned_response[short_code]', this.shortCode);
       formData.append('canned_response[content]', this.content);
       if (this.cannedFile) {
         formData.append('canned_response[canned_file]', this.cannedFile);
       }
-
-      this.$store.dispatch('createCannedResponse', formData, { // Usamos this.$store.dispatch
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      })
-        .then(() => {
-          vm.addCanned.showLoading = false;
-          useAlert(vm.$t('CANNED_MGMT.ADD.API.SUCCESS_MESSAGE'));
-          vm.resetForm();
-          vm.onClose();
+      this.$store.dispatch('createCannedResponse', formData)
+      .then(() => {
+          // Reset Form, Show success message
+          this.addCanned.showLoading = false;
+          useAlert(this.$t('CANNED_MGMT.ADD.API.SUCCESS_MESSAGE'));
+          this.resetForm();
+          this.onClose();
         })
         .catch(error => {
-          vm.addCanned.showLoading = false;
+          this.addCanned.showLoading = false;
           const errorMessage =
-            error?.message || vm.$t('CANNED_MGMT.ADD.API.ERROR_MESSAGE');
+            error?.message || this.$t('CANNED_MGMT.ADD.API.ERROR_MESSAGE');
           useAlert(errorMessage);
         });
-    },
-    onDialogClose() {
-      this.onClose();
     },
   },
 };

@@ -47,7 +47,8 @@
       "FORM": {
         "ATTACHED_FILE": {
           "LABEL": "Archivo adjunto a esta respuesta predefinida",
-          "REMOVE_BUTTON": "X"
+          "REMOVE_BUTTON": "X",
+          "REMOVED_MESSAGE": "Archivo eliminado con exito"
         },
         "UPLOAD_NEW_FILE": {
           "LABEL": "Seleccionar un nuevo archivo"
